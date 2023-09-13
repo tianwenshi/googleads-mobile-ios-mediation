@@ -22,10 +22,15 @@
 #import "../CustomEvent/SampleCustomEventConstants.h"
 #import "MediationExample-Swift.h"
 
-NSString *const kCustomEventBannerAdUnitID = @"ca-app-pub-3940256099942544/2493674513";
-NSString *const kCustomEventInterstitialAdUnitID = @"ca-app-pub-3940256099942544/3970407716";
-NSString *const kCustomEventNativeAdUnitID = @"ca-app-pub-3940256099942544/2099734914";
-NSString *const kCustomEventRewardedAdUnitID = @"ca-app-pub-3940256099942544/7193106110";
+
+NSString *const kCustomEventBannerAdUnitID = @"ca-app-pub-7727742383093512/4820370464";
+NSString *const kCustomEventInterstitialAdUnitID = @"ca-app-pub-7727742383093512/3426601580";
+NSString *const kCustomEventNativeAdUnitID = @"";//@"ca-app-pub-3940256099942544/2099734914";
+NSString *const kCustomEventRewardedAdUnitID = @"ca-app-pub-7727742383093512/9933096344";
+//NSString *const kCustomEventBannerAdUnitID = @"ca-app-pub-3940256099942544/2493674513";
+//NSString *const kCustomEventInterstitialAdUnitID = @"ca-app-pub-3940256099942544/3970407716";
+//NSString *const kCustomEventNativeAdUnitID = @"ca-app-pub-3940256099942544/2099734914";
+//NSString *const kCustomEventRewardedAdUnitID = @"ca-app-pub-3940256099942544/7193106110";
 NSString *const kAdapterBannerAdUnitID = @"ca-app-pub-3940256099942544/5855720519";
 NSString *const kAdapterInterstitialAdUnitID = @"ca-app-pub-3940256099942544/8809186917";
 NSString *const kAdapterNativeAdUnitID = @"ca-app-pub-3940256099942544/2239335711";
