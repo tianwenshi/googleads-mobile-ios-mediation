@@ -53,12 +53,12 @@
     XCTAssertTrue(adWebview.isHittable, @"WKWebView is not hittable");
     
     XCUIElement *closebtn = self.app.buttons[@"close_button"];
-    XCTAssertTrue(Label.exists, @"close btn not found!");
+    XCTAssertTrue(closebtn.exists, @"close btn not found!");
     !closebtn.exists ?: [closebtn tap];
     sleep(2);
     
     XCUIElement *closeRbtn = self.app.buttons[@"Not interested"];
-    XCTAssertTrue(Label.exists, @"Not interested btn not found!");
+    XCTAssertTrue(closeRbtn.exists, @"Not interested btn not found!");
     !closeRbtn.exists ?: [closeRbtn tap];
     sleep(3);
     

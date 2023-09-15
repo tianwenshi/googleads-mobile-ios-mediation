@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+    "A573790DFF96695CCBE74094F054A74C7211C8A7" : {
+      "DVTSourceControlBranchIdentifierKey" : "UIXCTest",
+      "DVTSourceControlLocationRevisionKey" : "fbdd38c2205b2eaae595778f37f4001ef01ddb38",
+      "DVTSourceControlBranchOptionsKey" : 0,
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A573790DFF96695CCBE74094F054A74C7211C8A7",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8C0B7018-0D8D-43D1-9E62-B5C16835DA86",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A573790DFF96695CCBE74094F054A74C7211C8A7" : "googleads-mobile-ios-mediation\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MediationExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "example\/MediationExample.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MirindaLiu\/googleads-mobile-ios-mediation",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A573790DFF96695CCBE74094F054A74C7211C8A7"
+    }
+  ]
+}
