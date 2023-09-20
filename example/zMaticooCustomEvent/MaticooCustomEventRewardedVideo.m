@@ -106,9 +106,6 @@
     }
 }
 
-- (void)closeButtonTouchDown:(UIButton*)btn {
-    [_rewardedAd.modalViewController dismissViewControllerAnimated:YES completion:nil];
-}
 #pragma mark SampleRewardedAdDelegate implementation
 
 - (void)rewardedVideoAdDidLoad:(MATRewardedVideoAd *)rewardedVideoAd{
