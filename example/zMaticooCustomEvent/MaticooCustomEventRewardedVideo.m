@@ -103,14 +103,6 @@
     if (_rewardedAd && _rewardedAd.isReady){
         [_rewardedAd showAdFromViewController:viewController];
         [MaticooMediationTrackManager trackMediationAdShow:_rewardedAd.placementID adType:REWARDEDVIDEO];
-        UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 10, 10)];
-        closeBtn.backgroundColor = [UIColor blackColor];
-        closeBtn.accessibilityIdentifier = @"ad_closeBtn";
-        [closeBtn setTitle:@"x" forState:UIControlStateNormal];
-        [closeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [closeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
-        [closeBtn addTarget:self action:@selector(closeButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
-        [_rewardedAd.modalViewController.view addSubview: closeBtn];
     }
 }
 

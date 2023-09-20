@@ -1096,8 +1096,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1404,6 +1404,21 @@
 			};
 			name = Debug;
 		};
+		1A3CDEB6168A931436EA3803B6807081 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24930DBF477C07994BD441038FD33C00 /* Google-Mobile-Ads-SDK.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		20112ECA14ACA1B78A4FE2DB8DF2F797 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF8A0EA265E90DEF4583A0BA997688DD /* GoogleAppMeasurement.debug.xcconfig */;
@@ -1464,19 +1479,21 @@
 			};
 			name = Release;
 		};
-		77666CEA3ABB8405D9CB217E2FDB55E1 /* Debug */ = {
+		4DC5276C858D5530B5D81C1776A9F6E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A56F838FF83BDE65A49EE057DBEE053 /* GoogleUserMessagingPlatform.debug.xcconfig */;
+			baseConfigurationReference = 8BCC8B69B9C138715D8DAE41C500698E /* Google-Mobile-Ads-SDK.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		7B5D7001AC18ACEFB7DB5DE816EF5218 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1496,22 +1513,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7F5FA9A69528841DE8681170A249F7DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BCC8B69B9C138715D8DAE41C500698E /* Google-Mobile-Ads-SDK.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1563,6 +1564,21 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		87DA95C71A30729FC9C5A2D4F395F5E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A56F838FF83BDE65A49EE057DBEE053 /* GoogleUserMessagingPlatform.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1649,21 +1665,6 @@
 			};
 			name = Debug;
 		};
-		A50F63F827F5369BAB1C48C0F6208680 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FBF6DC0E29BE31C0D0824C373A5E09A /* GoogleUserMessagingPlatform.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		A70CB3B676C186D8BC91DD7E77DCF21D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D14AA4ADDCD1B63F483D9296F5C2F3E5 /* GoogleAppMeasurement.release.xcconfig */;
@@ -1700,6 +1701,22 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB4F9C47BF6ED8296BB59A420F379FAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBF6DC0E29BE31C0D0824C373A5E09A /* GoogleUserMessagingPlatform.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1768,21 +1785,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		C81E14E0259DBF52EBB4FC54C707E8D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24930DBF477C07994BD441038FD33C00 /* Google-Mobile-Ads-SDK.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1863,8 +1865,8 @@
 		06CD00000E5D104EF80EE85FCE4E1C52 /* Build configuration list for PBXAggregateTarget "Google-Mobile-Ads-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C81E14E0259DBF52EBB4FC54C707E8D8 /* Debug */,
-				7F5FA9A69528841DE8681170A249F7DB /* Release */,
+				1A3CDEB6168A931436EA3803B6807081 /* Debug */,
+				4DC5276C858D5530B5D81C1776A9F6E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1908,8 +1910,8 @@
 		7DB68CEBB4AD8D0360020324AB8F2324 /* Build configuration list for PBXAggregateTarget "GoogleUserMessagingPlatform" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77666CEA3ABB8405D9CB217E2FDB55E1 /* Debug */,
-				A50F63F827F5369BAB1C48C0F6208680 /* Release */,
+				87DA95C71A30729FC9C5A2D4F395F5E2 /* Debug */,
+				AB4F9C47BF6ED8296BB59A420F379FAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
