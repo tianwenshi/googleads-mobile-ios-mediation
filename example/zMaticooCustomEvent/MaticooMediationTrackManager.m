@@ -79,7 +79,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdRequest:(NSString*)pid adType:(NSInteger)adtype isAutoRefresh:(BOOL)isAuto{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:201],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:201],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid?pid:@"",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -88,7 +88,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdRequestFilled:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:205],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:205],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid?pid:@"",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -97,7 +97,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdRequestFailed:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:206],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:206],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid?pid:@"",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -106,7 +106,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdShow:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:202],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:202],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid?pid:@"",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -115,7 +115,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdImp:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:207],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:207],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid?pid:@"",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -124,7 +124,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdImpFailed:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:208],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:208],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid?pid:@"",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
@@ -133,7 +133,7 @@ static NSString *idfa = @"";
 + (void)trackMediationAdClick:(NSString*)pid adType:(NSInteger)adtype{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *jsonArray = [NSMutableArray array];
-    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:209],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid,@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
+    [jsonArray addObject:@{ @"eid": [NSNumber numberWithInt:209],@"ts": [NSNumber numberWithLongLong:TIMESTAMP_MS],@"ad_type": [NSNumber numberWithInteger:adtype], @"mediation":@"max", @"pid":pid?pid:@"",@"did":[self getIDFA],@"bundle":[self getBundle],@"appv":[self getShortBundleVersion]}];
     [dict setValue:jsonArray forKey:@"data"];
     NSString *url = [self buildLogUrl];
     [MaticooMediationNetwork POST:url parameters:dict completeHandle:^(id responseObj, NSError *error) {}];
