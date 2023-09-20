@@ -89,6 +89,7 @@
     if (adUnit == nil){
         NSError *error= [NSError errorWithDomain:@"com.google.zmaticoo" code:100 userInfo:[NSDictionary dictionaryWithObject:@"zmaticoo placement id is null" forKey:@"reason"]];
         _loadCompletionHandler(nil, error);
+        return;
     }
     _rewardedAd = [[MATRewardedVideoAd alloc] initWithPlacementID:adUnit];
     _rewardedAd.delegate = self;
