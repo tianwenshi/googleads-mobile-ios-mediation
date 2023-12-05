@@ -110,7 +110,7 @@
 
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd didFailWithError:(NSError *)error{
     _adEventDelegate = _loadCompletionHandler(nil, error);
-    [MaticooMediationTrackManager trackMediationAdRequestFailed:interstitialAd.placementID adType:INTERSTITIAL];
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:interstitialAd.placementID adType:INTERSTITIAL msg:error.description];
 }
 
 - (void)interstitialAdWillLogImpression:(MATInterstitialAd *)interstitialAd{
@@ -131,6 +131,6 @@
 
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd displayFailWithError:(NSError *)error{
     [_adEventDelegate didFailToPresentWithError:error];
-    [MaticooMediationTrackManager trackMediationAdImpFailed:interstitialAd.placementID adType:INTERSTITIAL];
+    [MaticooMediationTrackManager trackMediationAdImpFailed:interstitialAd.placementID adType:INTERSTITIAL msg:error.description];
 }
 @end

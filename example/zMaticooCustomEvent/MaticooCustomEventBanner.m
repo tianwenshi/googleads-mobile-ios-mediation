@@ -58,7 +58,7 @@
 }
 
 + (GADVersionNumber)adapterVersion {
-  GADVersionNumber version = {1.1};
+  GADVersionNumber version = {1.2};
   return version;
 }
 
@@ -131,7 +131,7 @@
 
 - (void)bannerAd:(nonnull MATBannerAd *)nativeBannerAd didFailWithError:(nonnull NSError *)error {
     _adEventDelegate = _loadCompletionHandler(nil, error);
-    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeBannerAd.placementID adType:BANNER];
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeBannerAd.placementID adType:BANNER msg:error.description];
 }
 
 - (void)bannerAdDidClick:(nonnull MATBannerAd *)banner {

@@ -123,7 +123,7 @@
 
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error{
     _adEventDelegate = _loadCompletionHandler(nil, error);
-    [MaticooMediationTrackManager trackMediationAdRequestFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO msg:error.description];
 }
 
 - (void)rewardedVideoAdWillLogImpression:(MATRewardedVideoAd *)rewardedVideoAd {
@@ -150,7 +150,7 @@
 
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd displayFailWithError:(NSError *)error{
     [_adEventDelegate didFailToPresentWithError:error];
-    [MaticooMediationTrackManager trackMediationAdImpFailed:rewardedVideoAd.placementID adType:INTERSTITIAL];
+    [MaticooMediationTrackManager trackMediationAdImpFailed:rewardedVideoAd.placementID adType:INTERSTITIAL msg:error.description];
 }
 
 @end
