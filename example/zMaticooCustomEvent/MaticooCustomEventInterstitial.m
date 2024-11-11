@@ -2,6 +2,7 @@
 #include <stdatomic.h>
 #include "MaticooMediationTrackManager.h"
 @import MaticooSDK;
+#import "MaticooCustomExtras.h"
 
 @interface MaticooCustomEventInterstitial () <GADMediationAdapter, GADMediationInterstitialAd, MATInterstitialAdDelegate> {
   /// The completion handler to call when the ad loading succeeds or fails.
@@ -50,7 +51,7 @@
 }
 
 + (nullable Class<GADAdNetworkExtras>)networkExtrasClass {
-  return Nil;
+    return [MaticooCustomExtras class];
 }
 
 - (void)loadInterstitialForAdConfiguration:
@@ -87,6 +88,10 @@
     }
     _interstitial = [[MATInterstitialAd alloc] initWithPlacementID:adUnit];
     _interstitial.delegate = self;
+    id extras = adConfiguration.extras;
+    if (extras != nil && [extras isKindOfClass:[MaticooCustomExtras class]]){
+        _interstitial.localExtra = ((MaticooCustomExtras *)extras).localExtra;
+    }
     [_interstitial loadAd];
     [MaticooMediationTrackManager trackMediationAdRequest:adUnit adType:INTERSTITIAL isAutoRefresh:NO];
 }

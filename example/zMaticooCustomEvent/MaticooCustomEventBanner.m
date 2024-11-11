@@ -10,6 +10,7 @@
 @import MaticooSDK;
 #include <stdatomic.h>
 #include "MaticooMediationTrackManager.h"
+#import "MaticooCustomExtras.h"
 
 #define dispatch_main_MATAdapter_ASYNC_safe(block)\
         if ([NSThread isMainThread]) {\
@@ -63,7 +64,7 @@
 }
 
 + (nullable Class<GADAdNetworkExtras>)networkExtrasClass {
-  return Nil;
+    return [MaticooCustomExtras class];
 }
 
 - (void)loadBannerForAdConfiguration:(GADMediationBannerAdConfiguration *)adConfiguration
@@ -90,6 +91,7 @@
 
       return delegate;
     };
+
     NSString *appkey = [[NSBundle mainBundle].infoDictionary objectForKey:@"zMaticooAppKey"];
       if(appkey == nil && ![appkey isEqualToString:@""]){
           NSError *error= [NSError errorWithDomain:@"com.google.zmaticoo" code:100 userInfo:[NSDictionary dictionaryWithObject:@"zmaticoo appkey is null" forKey:@"reason"]];
@@ -105,6 +107,13 @@
                   }
                   _bannerAd = [[MATBannerAd alloc] initWithPlacementID:adUnit];
                   _bannerAd.delegate = self;
+                  
+                  id extras = adConfiguration.extras;
+                  if (extras != nil && [extras isKindOfClass:[MaticooCustomExtras class]]){
+                      _bannerAd.localExtra = ((MaticooCustomExtras *)extras).localExtra;
+                      
+                  }
+                  
                   [_bannerAd loadAd];
                   _bannerAd.frame = CGRectMake(0, 0, adConfiguration.adSize.size.width, adConfiguration.adSize.size.height);
                   [MaticooMediationTrackManager trackMediationInitSuccess];

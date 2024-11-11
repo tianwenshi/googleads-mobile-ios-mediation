@@ -20,6 +20,7 @@
 		4A93FA521C286D8F00479579 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A93FA3A1C286D8F00479579 /* AppDelegate.m */; };
 		4A93FA591C286D8F00479579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A93FA481C286D8F00479579 /* Images.xcassets */; };
 		4A93FA601C286D8F00479579 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A93FA511C286D8F00479579 /* ViewController.m */; };
+		8FD0B64F2CE1B60A0063F22C /* MaticooCustomExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0B64E2CE1B60A0063F22C /* MaticooCustomExtras.m */; };
 		9BBF04112AB1B2F500594311 /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF04062AB1B2F500594311 /* MaticooMediationTrackManager.m */; };
 		9BBF04122AB1B2F500594311 /* MaticooCustomEventInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF040A2AB1B2F500594311 /* MaticooCustomEventInterstitial.m */; };
 		9BBF04132AB1B2F500594311 /* MaticooCustomEventRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF040B2AB1B2F500594311 /* MaticooCustomEventRewardedVideo.m */; };
@@ -126,6 +127,8 @@
 		4A93FA501C286D8F00479579 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = MediationExample/ViewController.h; sourceTree = SOURCE_ROOT; };
 		4A93FA511C286D8F00479579 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = MediationExample/ViewController.m; sourceTree = SOURCE_ROOT; };
 		55F23467E6F6FE42F1E398E2 /* Pods-MediationExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediationExample.debug.xcconfig"; path = "Target Support Files/Pods-MediationExample/Pods-MediationExample.debug.xcconfig"; sourceTree = "<group>"; };
+		8FD0B64D2CE1B60A0063F22C /* MaticooCustomExtras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooCustomExtras.h; sourceTree = "<group>"; };
+		8FD0B64E2CE1B60A0063F22C /* MaticooCustomExtras.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaticooCustomExtras.m; sourceTree = "<group>"; };
 		9BBF04052AB1B2F500594311 /* MaticooCustomEventRewardedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooCustomEventRewardedVideo.h; sourceTree = "<group>"; };
 		9BBF04062AB1B2F500594311 /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationTrackManager.m; sourceTree = "<group>"; };
 		9BBF04092AB1B2F500594311 /* MaticooCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooCustomEventInterstitial.h; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				9BBF040B2AB1B2F500594311 /* MaticooCustomEventRewardedVideo.m */,
 				9BBF040D2AB1B2F500594311 /* MaticooMediationTrackManager.h */,
 				9BBF04062AB1B2F500594311 /* MaticooMediationTrackManager.m */,
+				8FD0B64D2CE1B60A0063F22C /* MaticooCustomExtras.h */,
+				8FD0B64E2CE1B60A0063F22C /* MaticooCustomExtras.m */,
 			);
 			path = zMaticooCustomEvent;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				4A93FA521C286D8F00479579 /* AppDelegate.m in Sources */,
 				C22A2A6527F2B62B0080B51B /* SampleCustomEvent.m in Sources */,
 				C2A0569327B72A7B0095E758 /* SampleCustomEventSwift.swift in Sources */,
+				8FD0B64F2CE1B60A0063F22C /* MaticooCustomExtras.m in Sources */,
 				4A93FA601C286D8F00479579 /* ViewController.m in Sources */,
 				004F7B722A1576480046B59A /* SampleCustomEventUtils.m in Sources */,
 			);

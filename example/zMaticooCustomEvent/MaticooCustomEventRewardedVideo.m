@@ -10,6 +10,7 @@
 #include <stdatomic.h>
 #include "MaticooMediationTrackManager.h"
 @import MaticooSDK;
+#import "MaticooCustomExtras.h"
 
 @interface MaticooCustomEventRewardedVideo () <MATRewardedVideoAdDelegate, GADMediationRewardedAd, GADMediationAdapter> {
   /// Handle rewarded ads from Sample SDK.
@@ -56,7 +57,7 @@
 }
 
 + (nullable Class<GADAdNetworkExtras>)networkExtrasClass {
-    return Nil;
+    return [MaticooCustomExtras class];
 }
 
 - (void)loadRewardedAdForAdConfiguration:(GADMediationRewardedAdConfiguration *)adConfiguration
@@ -93,6 +94,12 @@
     }
     _rewardedAd = [[MATRewardedVideoAd alloc] initWithPlacementID:adUnit];
     _rewardedAd.delegate = self;
+    
+    id extras = adConfiguration.extras;
+    if (extras != nil && [extras isKindOfClass:[MaticooCustomExtras class]]){
+        _rewardedAd.localExtra = ((MaticooCustomExtras *)extras).localExtra;
+    }
+    
     [_rewardedAd loadAd];
     [MaticooMediationTrackManager trackMediationAdRequest:adUnit adType:REWARDEDVIDEO isAutoRefresh:NO];
 }

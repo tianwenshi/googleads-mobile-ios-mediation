@@ -24,6 +24,7 @@
 #import <SampleAdSDKAdapter/SampleAdSDKAdapter.h>
 
 #import "ExampleNativeAdView.h"
+#import "MaticooCustomExtras.h"
 
 @interface ViewController () <GADFullScreenContentDelegate,
                               GADNativeAdLoaderDelegate>
@@ -70,7 +71,18 @@
                                                 adTypes:@[ GADAdLoaderAdTypeNative ]
                                                 options:@[ adViewOptions ]];
   self.adLoader.delegate = self;
-  [self.adLoader loadRequest:[GADRequest request]];
+    
+    GADRequest * request =[GADRequest request];
+    MaticooCustomExtras * extra = [MaticooCustomExtras new];
+    [extra setLocalExtra:[self getMaticooExtra]];
+    [request registerAdNetworkExtras:extra];
+  [self.adLoader loadRequest:request];
+}
+
+-(NSDictionary *) getMaticooExtra {
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    [dict setValue:@"gpid" forKey:@"sjdjdjdndjdjd"];
+    return dict;
 }
 
 - (void)viewDidLoad {
@@ -79,7 +91,13 @@
 
   self.bannerAdView.adUnitID = self.config.bannerAdUnitID;
   self.bannerAdView.rootViewController = self;
-  [self.bannerAdView loadRequest:[GADRequest request]];
+    
+    GADRequest * request =[GADRequest request];
+    MaticooCustomExtras * extra = [MaticooCustomExtras new];
+    [extra setLocalExtra:[self getMaticooExtra]];
+    [request registerAdNetworkExtras:extra];
+    
+  [self.bannerAdView loadRequest:request];
 
   [self requestInterstitial];
   [self requestRewarded];
@@ -87,8 +105,15 @@
 }
 
 - (void)requestInterstitial {
-  [GADInterstitialAd loadWithAdUnitID:self.config.interstitialAdUnitID
-                              request:[GADRequest request]
+    NSString * adUnitId =self.config.interstitialAdUnitID;
+    NSLog(@"interstitialAdUnitID = %@", adUnitId);
+    
+    GADRequest * request =[GADRequest request];
+    MaticooCustomExtras * extra = [MaticooCustomExtras new];
+    [extra setLocalExtra:[self getMaticooExtra]];
+    [request registerAdNetworkExtras:extra];
+  [GADInterstitialAd loadWithAdUnitID:adUnitId
+                              request:request
                     completionHandler:^(GADInterstitialAd *ad, NSError *error) {
     if (error) {
       NSLog(@"Failed to load an interstitial ad with error: %@", error.localizedDescription);
@@ -109,13 +134,22 @@
 }
 
 - (void)requestRewarded {
-  GADRequest *request = [GADRequest request];
-  SampleExtras *extras = [[SampleExtras alloc] init];
-  extras.enableDebugLogging = YES;
-  extras.muteAudio = YES;
-  [request registerAdNetworkExtras:extras];
+//  GADRequest *request = [GADRequest request];
+//  SampleExtras *extras = [[SampleExtras alloc] init];
+//  extras.enableDebugLogging = YES;
+//  extras.muteAudio = YES;
+//    [request registerAdNetworkExtras:extras];
+    
+    GADRequest * request =[GADRequest request];
+    MaticooCustomExtras * extra = [MaticooCustomExtras new];
+    [extra setLocalExtra:[self getMaticooExtra]];
+    [request registerAdNetworkExtras:extra];
+    
+    
+    NSString * adUnitId = self.config.rewardedAdUnitID;
+    NSLog(@"rewardedAdUnitID = %@", adUnitId);
   [GADRewardedAd
-   loadWithAdUnitID:self.config.rewardedAdUnitID
+   loadWithAdUnitID:adUnitId
    request:request
    completionHandler:^(GADRewardedAd *ad, NSError *error) {
     if (error) {
