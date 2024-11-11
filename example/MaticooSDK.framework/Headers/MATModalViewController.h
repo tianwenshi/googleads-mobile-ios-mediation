@@ -29,5 +29,5 @@ typedef void (^VCDidAppear)(void);
 @property (nonatomic, assign) UIInterfaceOrientation forcedOrientation;
 
 - (void)forceRotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
-
+- (void)addLogoImageButton:(UIButton*)logo ort:(NSInteger)ort;
 @end

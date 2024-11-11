@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MATWebviewBridge : NSObject
 @property (nonatomic, weak) id<MATWebviewBridgeDelegate> delegate;
+@property (nonatomic,assign) BOOL isH5BtnClick;
 - (BOOL)parseRequestStr:(NSString*)requestStr;
 @end
 
@@ -22,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mraidBridgeCloseAd:(MATWebviewBridge*)bridge;
 - (void)mraidBridgeJSLoadSuccess:(MATWebviewBridge*)bridge;
 - (void)mraidBridgeJSLoadFailed:(MATWebviewBridge*)bridge;
+- (void)mraidBridgeImageImp:(MATWebviewBridge*)bridge;
 - (void)mraidBridgeVideoImp:(MATWebviewBridge*)bridge;
 - (void)mraidBridgeVideoClick:(MATWebviewBridge *)bridge position:(NSString *)position url:(NSString*)url;
 - (void)mraidBridgeVideoCompleted:(MATWebviewBridge*)bridge;
@@ -30,7 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mraidCloseVisible:(MATWebviewBridge*)bridge;
 - (void)mraidBridgeInteract:(MATWebviewBridge*)bridge info:(NSDictionary*)dict;
 - (void)mraidBridgeInteractClose:(MATWebviewBridge*)bridge;
-
+- (void)mraidBridgeJsLog:(MATWebviewBridge*)bridge eventName:(NSString*)eventName info:(NSDictionary*)dict;
+- (void)vastVideoBridge:(MATWebviewBridge*)bridge videoInfo:(NSDictionary*)info;
+- (void)vastVideoBridgeCompanionImp:(MATWebviewBridge*)bridge;
 @end
 
 static NSString* MATWebviewBridgeCommandWindowOnload = @"onload";

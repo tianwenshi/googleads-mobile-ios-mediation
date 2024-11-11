@@ -24,7 +24,13 @@
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+    [[GADMobileAds sharedInstance] startWithCompletionHandler:^(GADInitializationStatus * _Nonnull status) {
+        NSDictionary *adapterStatuses = [status adapterStatusesByClassName];
+        for (NSString *adapter in adapterStatuses) {
+            GADAdapterStatus *adapterStatus = adapterStatuses[adapter];
+            NSLog(@"Adapter Name: %@, Description: %@, Latency: %f", adapter, adapterStatus.description, adapterStatus.latency);
+        }
+    }];
   return YES;
 }
 

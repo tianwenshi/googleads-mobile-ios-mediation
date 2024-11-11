@@ -21,6 +21,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) NSInteger ntv_close_total;
 @property (nonatomic,assign) NSInteger ntv_close_failed;
 @property (nonatomic,assign) NSInteger ort;     //1:portait 2:landscape 3:adaptive
+@property (nonatomic,strong) NSDictionary* event;
+@property (nonatomic,assign) NSString* bi_url;     //bi的上报地址
+@property (nonatomic,assign) NSString *track_level;
+@property (nonatomic,assign) NSInteger test;     //测试设备
+@property (nonatomic,assign) NSInteger video_cache_ratio;
+@property (nonatomic,assign) NSInteger banner_cache_ratio;
+@property (nonatomic,strong) NSString* bi_app_id;
+@property (nonatomic,assign) NSInteger click_timeout;
+@property (nonatomic,assign) NSInteger landing_type;
+@property (nonatomic,assign) NSInteger active;
+@property (nonatomic,assign) NSInteger gzip;
+@property (nonatomic,assign) double visible_rate;
+@property (nonatomic,assign) NSInteger no_fill_count;
 @end
 
 @interface MATPlacement : NSObject
@@ -40,6 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)int64_t id;
 @property (nonatomic,assign)NSInteger w;
 @property (nonatomic,assign)NSInteger h;
+@property (nonatomic,assign)NSInteger interval;
 @end
 
 @interface MATInterstitial : NSObject

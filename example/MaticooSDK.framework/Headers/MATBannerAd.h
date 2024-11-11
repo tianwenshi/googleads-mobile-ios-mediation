@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MATBannerAd : UIView
 @property (nonatomic, weak) id<MATBannerAdDelegate> delegate;
 @property (nonatomic, strong) NSString* placementID;
+@property (nonatomic, strong) NSDictionary* localExtra;
 - (MATBannerAd*)initWithPlacementID:(NSString*)placementID;
 - (void)loadAd;
 - (void)loadAd:(NSString*)biddingRequestId;
@@ -23,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)bannerAdDidLoad:(MATBannerAd *)bannerAd;
 - (void)bannerAd:(MATBannerAd *)bannerAd didFailWithError:(NSError *)error;
 - (void)bannerAdDidImpression:(MATBannerAd*) bannerAd;
+- (void)bannerAd:(MATBannerAd *)bannerAd showFailWithError:(NSError *)error;
 - (void)bannerAdDidClick:(MATBannerAd*) bannerAd;
 - (void)bannerAdDismissed:(MATBannerAd*) bannerAd;
 @end

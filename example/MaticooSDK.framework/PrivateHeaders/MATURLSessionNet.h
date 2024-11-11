@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "MATEnum.h"
 @interface MATURLSessionNet : NSObject <NSURLSessionDelegate>
 
 +(instancetype)session;
@@ -21,7 +21,7 @@
  @return session
  */
 - (NSURLSessionDataTask*)GET:(NSURL *)url isRetJson:(BOOL)isJson completeHandler:(void(^)(id responseObj, NSError *error))complete;
-
+- (NSURLSessionDataTask*)GET:(NSURL *)url andCompleteHandler:(void(^)(id responseObj, MATContentType type, NSError* error))complete;
 /**
  封装NSURLSessionDataTask post方法
 

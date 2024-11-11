@@ -51,6 +51,7 @@ typedef NS_ENUM(NSUInteger, AdElement) {
 @property (nonatomic, strong) MATNativeAdElements* nativeElements;
 @property (nonatomic, assign, readonly) BOOL isTemplateAd;
 @property (nonatomic, strong) NSString* placementID;
+@property (nonatomic, strong) NSDictionary* localExtra;
 
 - (instancetype)initWithPlacementID:(NSString *)placementID;
 - (void)loadAd;

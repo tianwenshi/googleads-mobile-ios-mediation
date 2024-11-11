@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+#import "MATEnum.h"
 @interface MATNetWorkManager : NSObject <NSURLSessionDelegate>
 /**
  类方法进行初始化
@@ -27,6 +27,7 @@
  @return id
  */
 + (id)GET:(NSString *)path parameters:(NSDictionary *)params isRetJson:(BOOL)isJson completeHandler:(void(^)(id responseObj, NSError* error))complete;
++ (id)GET:(NSString *)path parameters:(NSDictionary *)params andCompleteHandler:(void(^)(id responseObj, MATContentType type, NSError* error))complete;
 
 /**
  Post请求
@@ -39,6 +40,8 @@
 + (id)POST:(NSString *)path completeHandle:(void (^)(id responseObj, NSError* error))complete;
 + (id)POST:(NSString *)path parameters:(NSDictionary *)params completeHandle:(void (^)(id responseObj, NSError* error))complete;
 + (id)POST:(NSString *)path parameters:(NSDictionary *)params giz:(BOOL)gzip completeHandle:(void (^)(id responseObj, NSError* error))complete;
++ (id)POST:(NSString *)path parameters:(NSDictionary *)params realGiz:(BOOL)gzip completeHandle:(void (^)(id responseObj, NSError* error))complete;
+
 /**
  获取图片素材
 
