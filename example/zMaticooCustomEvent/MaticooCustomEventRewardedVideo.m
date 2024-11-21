@@ -52,7 +52,7 @@
 }
 
 + (GADVersionNumber)adapterVersion {
-    GADVersionNumber version = {1.1};
+    GADVersionNumber version = {1.4};
     return version;
 }
 
