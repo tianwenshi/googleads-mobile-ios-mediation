@@ -41,7 +41,7 @@
 }
 
 + (GADVersionNumber)adSDKVersion {
-  GADVersionNumber version = {1,3,4};
+  GADVersionNumber version = {1,4,3};
   return version;
 }
 

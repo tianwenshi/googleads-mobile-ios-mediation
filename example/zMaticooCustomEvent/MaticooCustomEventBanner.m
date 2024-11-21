@@ -54,7 +54,7 @@
 }
 
 + (GADVersionNumber)adSDKVersion {
-  GADVersionNumber version = {1,3,4};
+  GADVersionNumber version = {1,4,3};
   return version;
 }
 
@@ -155,5 +155,9 @@
 
 - (void)bannerAdDismissed:(nonnull MATBannerAd *)bannerAd{
     [_adEventDelegate didDismissFullScreenView];
+}
+
+- (void)bannerAd:(MATBannerAd *)bannerAd showFailWithError:(NSError *)error {
+    
 }
 @end
